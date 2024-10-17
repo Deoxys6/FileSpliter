@@ -5,4 +5,5 @@ Project to get around the 10MB upload limit for files on discord. Allows the use
 ## Commands
 
 ***--splitFile*** requires the relative filename of the file that you wish to split. It will split the File into X files in the same folder as the project. 
+
 ***--combineFile*** requires the total number of files that are in the working directory that you wish to combine into the new file name provided. 
