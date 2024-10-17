@@ -3,6 +3,7 @@ import sys
 
 #Function used to split a single file into files each contains CHUNKSIZE bytes 
 def splitFile(fileName):
+    print(fileName)
     CHUNKSIZE = 10 * 1024 * 1024
     x = 1
     #open the orignal file, read the chunk of 10MB of data
@@ -36,11 +37,11 @@ def combineFile(numFiles, filename):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run some functions')
     # Add a commands the user can call
-    parser.add_argument('--splitFile',nargs=1, help='Split the file provided into 10MB files')
+    parser.add_argument('--splitFile',nargs=1, type=str, help='Split the file provided into 10MB files')
     parser.add_argument('--combineFile', nargs=2, help='Combines number of files provided into file name provided')    
     # Get our arguments from the user
     args = parser.parse_args()
     if args.splitFile:
-        splitFile(args.splitFile)
+        splitFile(args.splitFile[0])
     if args.combineFile:
         combineFile(int(args.combineFile[0]), args.combineFile[1])
