@@ -1,6 +1,6 @@
 # FileSplitter.py
 
-Project to get around the 10MB upload limit for files on discord. Allows the user to separate a file into several 10MB chunk files to upload to another user who can then user the code to re-assemble the file into it's original configuration. 
+Allows the user to separate a file into several 10MB chunk files, at which point the user can then run the code to re-assemble the file into it's original configuration. 
 
 ## Commands
 
